@@ -15,7 +15,7 @@ $ npm start
 
 ### See also
 
-- [JSceneKit](/magicien/JSceneKit/)
-- [JMMDSceneKit](/magicien/JMMDSceneKit/)
-- [MMDSceneKit](/magicien/MMDSceneKit/)
+- [JSceneKit](https://github.com/magicien/JSceneKit/)
+- [JMMDSceneKit](https://github.com/magicien/JMMDSceneKit/)
+- [MMDSceneKit](https://github.com/magicien/MMDSceneKit/)
 
