@@ -2,7 +2,7 @@
 
 A sample application for Electron + JMMDSceneKit
 
-![ScreenShort](/magicien/ElectronMMDSample/blob/readme/readme/screenshot.png)
+![ScreenShort](https://github.com/magicien/ElectronMMDSample/blob/readme/readme/screenshot.png)
 
 ### How to try
 
@@ -15,7 +15,7 @@ $ npm start
 
 ### See also
 
-[JSceneKit](/magicien/JSceneKit/)
-[JMMDSceneKit](/magicien/JMMDSceneKit/)
-[MMDSceneKit](/magicien/MMDSceneKit/)
+- [JSceneKit](/magicien/JSceneKit/)
+- [JMMDSceneKit](/magicien/JMMDSceneKit/)
+- [MMDSceneKit](/magicien/MMDSceneKit/)
 
