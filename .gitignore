@@ -3,6 +3,6 @@ tmp
 *~
 *.swp
 node_modules
-build/
+dist/
 coverage*
 .nyc_output

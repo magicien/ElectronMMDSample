@@ -12,7 +12,18 @@
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "electron-packager . ElectronPractice --platform=darwin,win32 --arc    h=x64 --version=1.6.0"
+    "clean": "rimraf ./dist",
+    "clean:mac": "rimraf ./dist/ElectronMMDSample-darwin-x64*",
+    "clean:win": "rimraf ./dist/ElectronMMDSample-win32-x64*",
+    "pack": "npm run pack:mac && npm run pack:win",
+    "pack:mac": "npm run build:mac && npm run zip:mac",
+    "pack:win": "npm run build:win && npm run zip:win",
+    "build": "npm run build:mac && npm run build:win",
+    "build:mac": "npm run clean:mac && electron-packager . ElectronMMDSample --out=./dist --platform=darwin --arch=x64 --electron-version=1.6.0 -asar=true",
+    "build:win": "npm run clean:win && electron-packager . ElectronMMDSample --out=./dist --platform=win32 --arch=x64 --electron-version=1.6.0 -asar=true",
+    "zip": "npm run zip:mac && npm run zip:win",
+    "zip:mac": "cd dist && bestzip ElectronMMDSample-darwin-x64.zip ElectronMMDSample-darwin-x64",
+    "zip:win": "cd dist && bestzip ElectronMMDSample-win32-x64.zip ElectronMMDSample-win32-x64"
   },
   "repository": {
     "type": "git",
@@ -43,18 +54,21 @@
     "babel-preset-react": "^6.23.0",
     "babel-register": "^6.24.0",
     "electron": "^1.6.2",
-    "jmmdscenekit": "0.0.2",
-    "jscenekit": "^0.1.5",
+    "jmmdscenekit": "0.0.3",
+    "jscenekit": "^0.1.8",
     "radium": "^0.18.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-treebeard": "^1.1.4"
   },
   "devDependencies": {
+    "archiver": "^1.3.0",
+    "bestzip": "^1.1.4",
     "electron-packager": "^8.6.0",
     "eslint": "^3.19.0",
     "eslint-config-eslint": "^4.0.0",
     "eslint-plugin-node": "^4.2.2",
-    "eslint-plugin-react": "^6.10.3"
+    "eslint-plugin-react": "^6.10.3",
+    "rimraf": "^2.6.1"
   }
 }
