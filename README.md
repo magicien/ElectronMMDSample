@@ -2,7 +2,7 @@
 
 A sample application for Electron + JMMDSceneKit
 
-![ScreenShort](https://github.com/magicien/ElectronMMDSample/blob/readme/readme/screenshot.png)
+![ScreenShot](https://github.com/magicien/ElectronMMDSample/blob/readme/readme/screenshot.png)
 
 ### How to try
 
